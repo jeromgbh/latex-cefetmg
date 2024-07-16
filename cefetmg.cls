@@ -342,29 +342,29 @@
 % Redefine nomes para o português
 % (redefinições da classe 'abntex2')
 \addto\captionsbrazil{%
-    % Nomes definidos na classe 'babel'
-    \renewcommand{\listadesiglasname}{Lista de Abreviaturas e Siglas}
-    \renewcommand{\listadesimbolosname}{Lista de S\'{i}mbolos}
-    \renewcommand{\listfigurename}{Lista de Figuras}
-    \renewcommand{\listtablename}{Lista de Tabelas}
-    \renewcommand{\indexname}{\'{I}ndice Remissivo}
-    % Nomes usados com a macro \autoref
-    \renewcommand{\pageautorefname}{p\'agina}
-    \renewcommand{\sectionautorefname}{Se\c{c}\~ao}
-    \renewcommand{\subsectionautorefname}{Subse\c{c}\~ao}
-    \renewcommand{\subsubsectionautorefname}{Subsubse\c{c}\~ao}
-    \renewcommand{\paragraphautorefname}{Subse\c{c}\~ao}
-    \renewcommand{\algorithmautorefname}{Algoritmo}
-    \renewcommand{\backrefpagesname}{Citado na(s) p\'agina(s):~}
-    \renewcommand*{\backrefalt}[4]{%
-        \ifcase #1
-            Nenhuma cita\c{c}\~ao no texto.
-        \or
-            Citado na p\'agina #2.
-        \else
-            Citado #1 vezes nas p\'aginas #2.
-        \fi
-    }
+% Nomes definidos na classe 'babel'
+\renewcommand{\listadesiglasname}{Lista de Abreviaturas e Siglas}
+\renewcommand{\listadesimbolosname}{Lista de S\'{i}mbolos}
+\renewcommand{\listfigurename}{Lista de Figuras}
+\renewcommand{\listtablename}{Lista de Tabelas}
+\renewcommand{\indexname}{\'{I}ndice Remissivo}
+% Nomes usados com a macro \autoref
+\renewcommand{\pageautorefname}{p\'agina}
+\renewcommand{\sectionautorefname}{Se\c{c}\~ao}
+\renewcommand{\subsectionautorefname}{Subse\c{c}\~ao}
+\renewcommand{\subsubsectionautorefname}{Subsubse\c{c}\~ao}
+\renewcommand{\paragraphautorefname}{Subse\c{c}\~ao}
+\renewcommand{\algorithmautorefname}{Algoritmo}
+\renewcommand{\backrefpagesname}{Citado na(s) p\'agina(s):~}
+\renewcommand*{\backrefalt}[4]{%
+    \ifcase #1
+        Nenhuma cita\c{c}\~ao no texto.
+    \or
+        Citado na p\'agina #2.
+    \else
+        Citado #1 vezes nas p\'aginas #2.
+    \fi
+}
 }
 
 % -----------------------------------------------------------------------------
@@ -386,8 +386,8 @@
 \renewenvironment{siglas}{%
     \pretextualchapter{\listadesiglasname}
     \begin{symbols}
-    \setSpacing{0.0} % <-- Adicionado para remover os espaços entre as listas
-}{%
+        \setSpacing{0.0} % <-- Adicionado para remover os espaços entre as listas
+        }{%
     \end{symbols}
     \cleardoublepage
 }
@@ -397,8 +397,8 @@
 \renewenvironment{simbolos}{%
     \pretextualchapter{\listadesimbolosname}
     \begin{symbols}
-    \setSpacing{0.0} % <-- Adicionado para remover os espaços entre as listas
-}{%
+        \setSpacing{0.0} % <-- Adicionado para remover os espaços entre as listas
+        }{%
     \end{symbols}
     \cleardoublepage
 }
@@ -610,7 +610,7 @@
             \begin{SingleSpacing}
                 \setlength\parindent{0pt}
                 \setlength\parskip{12pt}
-}{%
+                }{%
             \end{SingleSpacing}
         \end{minipage}
     \end{flushright}
@@ -632,7 +632,7 @@
             \begin{SingleSpacing}
                 \setlength\parindent{0pt}
                 \setlength\parskip{12pt}
-}{%
+                }{%
             \end{SingleSpacing}
         \end{minipage}
     \end{flushright}
@@ -648,7 +648,7 @@
     \renewcommand{\abstractnamefont}{\chaptitlefont}
     \renewcommand{\abstractname}{\ABNTEXchapterupperifneeded{#1}}
     \begin{abstract}
-    \vspace{23pt} % <-- Adicionado para manter um espaço igual aos capítulos
-}{%
+        \vspace{23pt} % <-- Adicionado para manter um espaço igual aos capítulos
+        }{%
     \end{abstract}\PRIVATEclearpageifneeded
 }
