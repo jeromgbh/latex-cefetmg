@@ -217,7 +217,7 @@
 % Comando de figura: Logomarca da instituição
 \providecommand{\imprimirlogoinstituicao}{}
 \newcommand{\logoinstituicao}[2]{\renewcommand{\imprimirlogoinstituicao}%
-    {\includegraphics[height={#1}]{#2}}}
+    {\includegraphics[height={#1}]{#2}\vspace{0.4cm}}}
 
 % Comando de listas: Imprimir lista de figuras
 \newcommand{\imprimirlistafiguras}{%
@@ -411,8 +411,8 @@
         % Imprime logo, instituição e o nome do programa
         \begin{center}
             \imprimirlogoinstituicao{} \\
-            \normalfont\scshape{\imprimirinstituicao} \\
-            \normalfont\scshape{\imprimirprograma} \\
+            \large\textsc{\imprimirinstituicao} \\
+            \large\textsc{\imprimirprograma} \\
         \end{center}
 
         % Espaço vertical
