@@ -164,23 +164,23 @@
 
 % Redefine tamanho das fontes de capítulos e seções
 % (redefinições da classe 'abntex2')
-\renewcommand{\ABNTEXchapterfont}{\normalfont\bfseries}
-\renewcommand{\ABNTEXchapterfontsize}{\HUGE}
+% \renewcommand{\ABNTEXchapterfont}{\normalfont\bfseries}
+% \renewcommand{\ABNTEXchapterfontsize}{\HUGE}
 
-\renewcommand{\ABNTEXpartfont}{\normalfont}
-\renewcommand{\ABNTEXpartfontsize}{\ABNTEXchapterfontsize}
+% \renewcommand{\ABNTEXpartfont}{\normalfont}
+% \renewcommand{\ABNTEXpartfontsize}{\ABNTEXchapterfontsize}
 
-\renewcommand{\ABNTEXsectionfont}{\normalfont}
-\renewcommand{\ABNTEXsectionfontsize}{\Large}
+% \renewcommand{\ABNTEXsectionfont}{\normalfont}
+% \renewcommand{\ABNTEXsectionfontsize}{\Large}
 
-\renewcommand{\ABNTEXsubsectionfont}{\normalfont}
-\renewcommand{\ABNTEXsubsectionfontsize}{\large}
+% \renewcommand{\ABNTEXsubsectionfont}{\normalfont}
+% \renewcommand{\ABNTEXsubsectionfontsize}{\large}
 
-\renewcommand{\ABNTEXsubsubsectionfont}{\normalfont}
-\renewcommand{\ABNTEXsubsubsectionfontsize}{\normalsize}
+% \renewcommand{\ABNTEXsubsubsectionfont}{\normalfont}
+% \renewcommand{\ABNTEXsubsubsectionfontsize}{\normalsize}
 
-\renewcommand{\ABNTEXsubsubsubsectionfont}{\normalfont}
-\renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
+% \renewcommand{\ABNTEXsubsubsubsectionfont}{\normalfont}
+% \renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
 
 % Redefine tamanho das fontes de figuras
 % (redefinições da classe 'memoir')
