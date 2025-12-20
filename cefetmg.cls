@@ -6,6 +6,12 @@
 % Projeto hospedado em: https://github.com/cfgnunes/latex-cefetmg
 %
 % Autor: Cristiano Fraga G. Nunes <cfgnunes@gmail.com>
+%
+% Fork Dezembro/2025 - jeronimo.barros@gmail.com
+%
+% Reformatação e alteração nas configurações do abntex2cite de hyperref para
+% url.
+%
 % -----------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
@@ -27,34 +33,43 @@
     a4paper,               % Tamanho do papel
     sumario=tradicional,   % Seleciona o sumário tradicional
     % Opções da classe 'babel'
-    brazil,                % Idioma do documento
+    brazilian,             % Idioma do documento
 }{abntex2}
 
 \ProcessOptions\relax
 \LoadClass{abntex2}
 
+\makeatletter
+
 % -----------------------------------------------------------------------------
 % Pacotes utilizados
 % -----------------------------------------------------------------------------
-\RequirePackage{hyperref}
-\RequirePackage{chngcntr}
-\RequirePackage{etoolbox}
-\RequirePackage{pdfpages}
-\RequirePackage[brazilian, hyperpageref]{backref}
+% Mantidos apenas os pacotes efetivamente usados nesta classe.
+
+\RequirePackage{chngcntr} % \counterwithout
+\RequirePackage{etoolbox} % \AfterPreamble, \apptocmd, etc.
+\RequirePackage{ifthen}   % \ifthenelse
+\RequirePackage{pdfpages} % \includepdf
 \RequirePackage[portuguese, onelanguage, algoruled]{algorithm2e}
-\RequirePackage{color}
-\RequirePackage[%
+
+\RequirePackage{xcolor}   % \definecolor
+
+\RequirePackage[
     alf,
     abnt-emphasize=bf,
     bibjustif,
     recuo=0cm,
     abnt-doi=expand,
-    abnt-url-package=hyperref,
+    abnt-url-package=url,
     abnt-refinfo=yes,
     abnt-etal-cite=3,
     abnt-etal-list=3,
     abnt-thesis-year=final
 ]{abntex2cite}
+
+% O 'hyperref' deve ser carregado o mais tarde possível.
+\RequirePackage{hyperref}
+\RequirePackage[brazilian, hyperpageref]{backref}
 
 % -----------------------------------------------------------------------------
 % Configurações gerais
@@ -292,7 +307,7 @@
 \renewcommand{\textual}{%
     \ifthenelse{\equal{\flagnomecapitulo}{true}}{%
         \chapterstyle{default}
-    }{%
+    }{
         \chapterstyle{abnt}
     }
     \setlength{\beforechapskip}{-30pt}  % Remove espaço antes dos títulos
@@ -652,3 +667,6 @@
 }{%
     \end{abstract}\PRIVATEclearpageifneeded
 }
+
+\makeatother
+\endinput
